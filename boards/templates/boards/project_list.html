@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trello Clone</title>
+</head>
+<body>
+    <h1>Welcome to my project board</h1>
+    <hr>
+
+    <h3>All Projects:</h3>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <strong>{{ project.name }}</strong> - Created by: {{ project.owner.username }}
+                <p>{{ project.description }}</p>
+            </li>
+        {% empty %}
+            <li>Np Projects found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
