@@ -14,7 +14,10 @@
     <ul>
         {% for project in projects %}
             <li>
-                <strong>{{ project.name }}</strong> - Created by: {{ project.owner.username }}
+                <a href="{% url 'project_detail' project.id %}">
+                    <strong>{{ project.name }}</strong>
+                </a>
+                 - Created by: {{ project.owner.username }}
                 <p>{{ project.description }}</p>
             </li>
         {% empty %}

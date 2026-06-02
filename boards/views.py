@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Project
 from .forms import ProjectForm
 
@@ -24,3 +24,7 @@ def create_project(request):
         form = ProjectForm()
 
     return render(request, 'boards/project_create.html', {'form': form})
+
+def project_detail(request, project_id):
+    project = get_object_or_404(Project, id=project_id)
+    return render(request, 'boards/project_detail.html', {'project': project})
