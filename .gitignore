@@ -1,0 +1,44 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django stuff
+db.sqlite3
+*.log
+local_settings.py
+
+# Migrations (ONLY if you're resetting DB often; otherwise keep migrations)
+# If you're unsure, DO NOT ignore migrations
+# */migrations/*.pyc
+# */migrations/__pycache__/
+
+# Environment variables
+.env
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Django static files (if collected)
+staticfiles/
+
+# pytest / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Mypy / type checking
+.mypy_cache/
+
+# Django secret key backup (if you ever store it separately)
+*.key
